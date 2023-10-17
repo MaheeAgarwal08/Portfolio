@@ -237,6 +237,7 @@
       }
       form{
         padding-top: 1rem;
+        
       }
      @media(max-width:998px) {
          html{
@@ -395,15 +396,15 @@
       <div class="contact-form">
         <h1>Request Information</h1>
         <form onsubmit="return false">
-          <input type="text" placeholder="Enter your name" id="lastName" />
+          <input type="text" placeholder="Enter your name" id="lastName" style="background-color: white;"/>
           <br><br>
-          <input type="email" placeholder="Enter your email" id="email" />
+          <input type="email" placeholder="Enter your email" id="email" style="background-color: white;" />
           <br><br>
-          <span>What is your question?</span>
+          <span >What is your question?</span>
            <br><br>
-           <textarea id="question" rows="4"></textarea>
+           <textarea id="question" rows="4" placeholder="Enter your message." style="background-color: white;"></textarea>
            <br><br>
-           <button onclick="sendContact();">Submit</button>
+           <button onclick="sendContact();" style="background-color: white;">Submit</button>
         </form>
       </div>
       <div class="footer-box">
