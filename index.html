@@ -10,6 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200;1,600&display=swap"
       rel="stylesheet"
     />
+    <!--CDN link for dynamic navbar-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       * {
         margin: 0;
@@ -20,10 +22,44 @@
       }
       body {
         background-color: rgb(0, 0, 33);
+
         color: white;
         font-family: "Poppins", sans-serif;
       }
-      nav {
+      
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  padding: 1.4rem 1.6rem;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.topnav a.icon {
+  float: right;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color:rgb(0, 0, 33);
+  color: white;
+}
+      /*nav {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -45,15 +81,15 @@
       nav ul li a:hover {
         color: rgb(153, 153, 206);
         font-size: 1.06rem;
-      }
+      }*/
       .left {
-        font-size: 2.3rem;
+        font-size: 3rem;
       }
       .firstsection {
         display: flex;
         justify-content: space-around;
         margin: 2.5rem 0;
-        height: 60rem;
+        height: 55rem;
       }
       .firstsection > div {
         width: 30%;
@@ -72,6 +108,8 @@
       .left-section .buttons {
         padding: 5rem 0;
         display: flexbox;
+        margin-right: 1.5rem;
+        
       }
       button:hover {
         color: rgb(153, 153, 206);
@@ -79,12 +117,12 @@
       }
 
       .left-section .btn {
-        padding: 1.2rem;
-        background-color: #0f1142;
-        color: white;
-        border: 0.2rem solid white;
+        
+        background-color:white;
+        color: rgb(0, 0, 33);
+        height: 2.5rem;
         border-radius: 0.3rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
         cursor: pointer;
       }
       .right-section {
@@ -95,10 +133,12 @@
       }
       .right-section img {
         width: 25rem;
-        height: 40rem;
+        height: 35rem;
       }
+      
+
       .purple {
-        color: blueviolet;
+        color: rgb(170,107,228);
       }
       .second {
         max-width: 80vw;
@@ -182,6 +222,22 @@
         margin: 5rem 5rem;
         color: WHITE;
       }
+      #element{
+        color:rgb(170,107,228);
+      }
+      .contact-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        background-color: rgb(0, 0, 33);
+        color: white;
+        padding: 2rem;
+        font-size: 1rem;
+      }
+      form{
+        padding-top: 1rem;
+      }
      @media(max-width:998px) {
          html{
           font-size: 55%;
@@ -195,6 +251,7 @@
       
       .second .box{
         flex-direction: column-reverse;
+        align-items: center;
         background-color: rgb(0, 0, 33);
       }
       .second .vertical{
@@ -210,37 +267,65 @@
       .footer-first{
         padding-bottom: 1.5rem;
       }
+      .box{
+        align-items: center;
+        margin-top:0 ;
+        padding-top:0.5rem ;
+      }
      }
     </style>
   </head>
+  
   <body>
     <header>
-      <nav>
+      <!-- Simulate a smartphone / tablet look -->
+
+
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <a href="#home" class="active">Mahee's Portfolio</a>
+    <div id="myLinks">
+      <ul style=" list-style: none;">
+        <li><a href="#FIRST">Home</a></li>
+        <li><a href="#MIDDLE">About</a></li>
+        <li><a href="#SECOND">Skills</a></li>
+        <li><a href="#SECOND">Courses</a></li>
+        <li><a href="#FOOTER">Contact Me</a></li>
+      </ul>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+      <!--<nav>
         <div class="left">Mahee's Portfolio</div>
         <div class="right">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Services</a></li>
-            <li><a href="/">Projects</a></li>
-            <li><a href="/">Contact Me</a></li>
+         <ul>
+            <li><a href="#FIRST">Home</a></li>
+            <li><a h ref="#MIDDLE">About</a></li>
+            <li><a href="#SECOND">Skills</a></li>
+            <li><a href="#SECOND">Courses</a></li>
+            <li><a href="#FOOTER">Contact Me</a></li>
           </ul>
         </div>
-      </nav>
+      </nav>-->
+
     </header>
     <main>
-      <section class="firstsection">
+      <section class="firstsection" id="FIRST">
         <div class="left-section">
           Hi, My name is <span class="purple">Mahee.</span>
           <div>
             Currently,I am pursuing a Bachelor of Technology degree in
             Electronics and Instrumentation Engineering at Odisha University of
-            Technology and Research,Bhubaneswar.I have a keen interest in Web
-            Development.
+            Technology & Research , Bhubaneswar.I have a keen interest in 
           </div>
+          <span id="element"></span>
+
           <div class="buttons">
-            <button type="button" class="btn">Download Resume</button>
-            <button type="button" class="btn">Visit Github</button>
+            <!--<button type="button" class="btn">Download Resume</button>-->
+            <button type="button" class="btn"><a href="https://github.com/MaheeAgarwal08/Portfolio" style="text-decoration: none;">Visit Github</a></button>
           </div>
         </div>
         <div class="right-section">
@@ -250,7 +335,7 @@
           />
         </div>
       </section>
-      <section class="middle">
+      <section class="middle" id="MIDDLE">
         <div class="about-me">
           Intro- My full name is Mahee Agarwal.I was born and brought up in
           Rourkela.I have completed my matriculation and higher secondary from
@@ -260,7 +345,7 @@
         </div>
       </section>
       <hr />
-      <section class="second">
+      <section class="second" id="SECOND">
         <span class="text-gray"></span>
         <h1>About-</h1>
         <div class="box">
@@ -301,23 +386,39 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer id="FOOTER">
       <div class="footer">
         <h3>Mahee's Portfolio</h3>
       </div>
 
+     
+      <div class="contact-form">
+        <h1>Request Information</h1>
+        <form onsubmit="return false">
+          <input type="text" placeholder="Enter your name" id="lastName" />
+          <br><br>
+          <input type="email" placeholder="Enter your email" id="email" />
+          <br><br>
+          <span>What is your question?</span>
+           <br><br>
+           <textarea id="question" rows="4"></textarea>
+           <br><br>
+           <button onclick="sendContact();">Submit</button>
+        </form>
+      </div>
       <div class="footer-box">
-        <div class="footer-first">
+        <!--<div class="footer-first">
           <ul>
-            <li style="font-size:2rem">Find  Me On</li>
-            <li  style="font-size:1.5rem">Instagram-_.mahee_agarwal._</li>
+            <li style="font-size:2rem">Find Me On</li>
+            <li  style="font-size:1.5rem;" >Instagram-_.mahee_agarwal._</a></li>
             
           </ul>
-        </div>
+        </div>-->
         <div class="footer-second">
           <ul>
           <li style="font-size: 2rem">Contact</li>
-            <li  style="font-size:1.5rem">Gmail-agarwalmahee08@gmail.com</li>
+            
+            <li  style="font-size:1.5rem">Gmail-<a href="mailto:agarwalmahee08@gmail.com" style="text-decoration: none;" >agarwalmahee08@gmail.com</a></li>
             
           </ul>
         </div>
@@ -328,5 +429,83 @@
         Mahee's Developer Portfolio | All rights reserved.
       </div>
     </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Development','App Development','Artificial Intelligence','Machine Learning'],
+      typeSpeed: 50,
+    });
+    
+</script>
+  </script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+    <script>
+      var fields={};
+      document.addEventListener("DOMContentLoaded", function() {
+    fields.firstName = document.getElementById('firstName');
+ 
+    fields.email = document.getElementById('email');
+
+    fields.question = document.getElementById('question');
+})
+function isNotEmpty(value) {
+ if (value == null || typeof value == 'undefined' ) return false;
+ return (value.length > 0);
+}
+
+function isEmail(email) {
+ let regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+ return regex.test(String(email).toLowerCase());
+}
+function fieldValidation(field, validationFunction) {
+ if (field == null) return false;
+
+ let isFieldValid = validationFunction(field.value)
+ if (!isFieldValid) {
+ field.className = 'placeholderRed';
+ } else {
+ field.className = '';
+ }
+
+ return isFieldValid;
+}
+function isValid() {
+ var valid = true;
+ 
+ valid &= fieldValidation(fields.firstName, isNotEmpty);
+ valid &= fieldValidation(fields.address, isNotEmpty);
+ valid &= fieldValidation(fields.question, isNotEmpty);
+ 
+
+ return valid;
+}
+class User {
+ constructor(firstName,  email,  question) {
+ this.firstName = firstName;
+ this.email=email;
+ this.question=question;
+ 
+ }
+}
+ function sendContact() {
+  if (isValid()) {
+    let usr=new User(firstName.value,email.value,question.value);
+    alert("Form submitted successfully.")
+  } 
+  else {
+    alert("There was an error")
+  }
+ }
+    </script>
   </body>
 </html>
